@@ -2,8 +2,9 @@ let fetchUrl= 'https://dog.ceo/api/breeds/image/random/4'
 fetch(fetchUrl)
 .then(res=> res.json())
 .then(data=> {
-//   console.log(data)
+   console.log(data)
   data.message.forEach(d => {
+    console.log(d)
    let div = document.querySelector('#dog-image-container')
    let image = document.createElement('img')
    div.append(image)
@@ -35,9 +36,9 @@ fetch(fetchUrl)
     // To get all the breeds inside the Object(data) we Call this method(Object.keys) we get the keys for the Object and then we call
     //  data.message to get the actual Object that we want to iterete.
     const breeds= Object.keys(data.message)
-        console.log(data.message)
+        // console.log(data.message)
         breeds.forEach(m=> {
-        console.log(m)
+        // console.log(m)
     let ul = document.querySelector('#dog-breeds')
     let li = document.createElement('li')
         ul.append(li)
